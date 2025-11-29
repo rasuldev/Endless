@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Endless/Endless.csproj" />
+  <Project Path="tests/Endless.Tests/Endless.Tests.csproj" />
+</Solution>
