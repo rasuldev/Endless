@@ -6,4 +6,52 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+
+
+  <PropertyGroup Label="NuGet package">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <Authors>Tomáš Pažourek</Authors>
+    <Company>$(Authors)</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <RepositoryUrl>https://github.com/tompazourek/Endless</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageReleaseNotes>$(RepositoryUrl)/releases</PackageReleaseNotes>
+
+    <PackageIcon>logo_64.png</PackageIcon>
+
+    <PackageTags>
+      c-sharp collections enumerable enumerator extensions functional generate
+      ienumerable ienumerable-extension infinite infinite-sequences iterate lazy
+      lazy-evaluation random reduce sequences stream
+    </PackageTags>
+
+    <Description>
+      Extensions that support the C# functional paradigm, focusing mainly on infinite enumerables.
+    </Description>
+
+    <!-- MinVer -->
+    <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+    <MinVerAutoIncrement>patch</MinVerAutoIncrement>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Symbols and docs">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="6.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\logo_64.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
 </Project>
